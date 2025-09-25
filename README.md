@@ -2,7 +2,7 @@
 
 A secure Express.js backend starter with authentication using [@baijanstack/express-auth](https://www.npmjs.com/package/@baijanstack/express-auth).
 It uses **Mongoose** for MongoDB and supports **email/password login**, **OTP verification**, and **Google OAuth 2.0**.
-This project (AuthCore) removes auth boilerplate and gives you a scalable API foundation.
+This project removes auth boilerplate and gives you a scalable API foundation.
 
 ---
 
