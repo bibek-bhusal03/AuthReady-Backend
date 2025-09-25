@@ -71,13 +71,9 @@ This project removes auth boilerplate and gives you a scalable API foundation.
     GOOGLE_FAILURE_REDIRECT_URI=http://localhost:3000/v1/auth/google/failure
    ```
 
-````
-
 4. **Set up MongoDB:**
-Make sure MongoDB is running or update `DATABASE_URL` for a remote instance.
-`models/db.ts` and `models/user.ts` handle DB connection and schema.
-
----
+   Make sure MongoDB is running or update `DATABASE_URL` for a remote instance.
+   `models/db.ts` and `models/user.ts` handle DB connection and schema.
 
 ## Usage
 
@@ -85,7 +81,7 @@ Start the development server:
 
 ```bash
 npm run dev
-````
+```
 
 Server runs at `http://localhost:3000` (or your configured PORT).
 
@@ -104,6 +100,16 @@ Request:
 ```
 
 Hashes password and sends verification email.
+
+---
+
+### POST `/v1/auth/send-otp`
+
+Request:
+
+```json
+{ "email": "user@example.com" }
+```
 
 ---
 
@@ -165,16 +171,6 @@ Request:
 
 ---
 
-### POST `/v1/auth/send-otp`
-
-Request:
-
-```json
-{ "email": "user@example.com" }
-```
-
----
-
 ### Google OAuth Routes
 
 - GET `/v1/auth/google` – Start Google login.
@@ -182,7 +178,7 @@ Request:
 
 ---
 
-## 🔒 Protected Routes
+## Protected Routes
 
 Use `validateAccessToken` middleware from `auth/index.ts`:
 
@@ -236,13 +232,13 @@ authcore-backend/
 
 ---
 
-## 📜 Scripts
+## Scripts
 
 - `npm start` – Run in Development
 
 ---
 
-## 🐞 Troubleshooting
+## Troubleshooting
 
 - **MongoDB Error:** Check `DATABASE_URL` and MongoDB status.
 - **Invalid Tokens:** Make sure `TOKEN_SECRET` matches.
@@ -251,13 +247,13 @@ authcore-backend/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Fork, create a branch, and submit a PR. Add tests and update docs.
 
 ---
 
-## 📄 License
+## License
 
 MIT
 
