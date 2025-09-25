@@ -1,11 +1,11 @@
 import express from "express";
-import { createAuth } from "./src/auth";
+import { createAuth } from "./auth";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import { env } from "./env";
+import { env } from "../env";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { connectDB } from "./src/models/db";
+import { connectDB } from "./models/db";
 dotenv.config();
 
 const app = express();
